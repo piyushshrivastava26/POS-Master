@@ -35,7 +35,7 @@ A full-stack restaurant POS system built to handle orders, tables, payments and 
 
 ## POS Master — Workflow
 
-    <img src="https://github.com/DigitalTrailblazer/POS-Master/blob/main/client/public/workFlow.png" alt="preview of workflow"/>
+<img src="https://github.com/DigitalTrailblazer/POS-Master/blob/main/client/public/workFlow.png" alt="preview of workflow"/>
 
 
 ## Technical Stack
