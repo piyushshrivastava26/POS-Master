@@ -1,6 +1,7 @@
-# POS Master: Modern Point-of-Sale & Order Management System
+# POS Master: Restaurant Management System
 
-A full-stack restaurant POS system built to handle orders, tables, payments and invoice printing exclusively managed by the owner. This project utilizes a modular monolithic architecture with production-grade practices, ensuring scalability and maintainability.
+* A full-stack restaurant POS(Point of Sale) system built to handle orders, tables, payments and invoice printing exclusively managed by the owner. 
+* This project utilizes a modular monolithic architecture with production-grade practices, ensuring scalability and maintainability.
 
 ## Live Demonstration
 
@@ -35,7 +36,7 @@ A full-stack restaurant POS system built to handle orders, tables, payments and 
 
 ## POS Master — Workflow
 
-<img src="https://github.com/DigitalTrailblazer/POS-Master/blob/main/client/public/workFlow.png" alt="preview of workflow"/>
+<img src="https://github.com/DigitalTrailblazer/POS-Master/blob/main/client/public/workFlow.png" alt="System Workflow Diagram" width="100%" />
 
 
 ## Technical Stack
@@ -57,6 +58,28 @@ A full-stack restaurant POS system built to handle orders, tables, payments and 
 
 **External Services**
 * Razorpay (Payment Gateway)
+
+
+## Application Glimpse
+* A preview of clean and minimal interface
+
+*Register UI*
+<img src="./client/public/preview_1.png" alt="Dashboard Screenshot" width="100%" />
+
+*Home Page UI*
+<img src="./client/public/preview_2.png" alt="Dashboard Screenshot" width="100%" />
+
+*Table Management UI*
+<img src="./client/public/preview_3.png" alt="Dashboard Screenshot" width="100%" />
+
+*Menu Page UI*
+<img src="./client/public/preview_4.png" alt="Dashboard Screenshot" width="100%" />
+
+*Order Processing UI*
+<img src="./client/public/preview_5.png" alt="Dashboard Screenshot" width="100%" />
+
+*Dashboard & Analytics*
+<img src="./client/public/preview_6_adminDashboard.png" alt="Dashboard Screenshot" width="100%" />
 
 
 ## Project Architecture
@@ -197,6 +220,14 @@ Backend runs on [http://localhost:1111](http://localhost:1111)
 * Handles invalid input gracefully with appropriate status codes and messages.
 
 
+## Future Enhancements
+
+* Sales analytics dashboard
+* Order history and reporting
+* Inventory management system
+* Notification system
+
+
 ## Contributing
 
 Contributions are always welcome!
@@ -214,5 +245,3 @@ Fork the repo, make changes, and open a PR.
 ## License
 
 This project is licensed under the **MIT License** — feel free to use and modify it.
-
-
