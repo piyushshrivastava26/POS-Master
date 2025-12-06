@@ -23,7 +23,7 @@ app.use(cookieParser())
 
 app.use(cors({
     origin : [
-        'https://pos-master-client.onrender.com/',
+        'https://pos-master-client.onrender.com',
         'http://localhost:5173'
     ],
     credentials : true,
