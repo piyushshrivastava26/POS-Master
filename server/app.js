@@ -6,6 +6,7 @@ const connectDB = require("./config/database.js");
 const userRoutes = require("./routes/userRoutes.js");
 const orderRoutes = require("./routes/orderRoutes.js");
 const tableRoutes = require("./routes/tableRoutes.js");
+const paymentRoutes = require("./routes/paymentRoutes.js");
 
 const createHttpError = require("http-errors");
 const cookieParser = require("cookie-parser");
@@ -42,7 +43,7 @@ app.get("/", (req, res) => {
 app.use("/api/user", userRoutes)
 app.use("/api/order", orderRoutes)
 app.use("/api/table", tableRoutes)
-
+app.use("/api/payment", paymentRoutes)
 
 
 
