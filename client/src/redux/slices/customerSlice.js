@@ -7,7 +7,7 @@ const initialState = {
     customerName : "",
     customerPhone : "",
     guests : 0,
-    tableNo : ""
+    table : null
 }
 
 
@@ -29,15 +29,17 @@ const customerSlice = createSlice({
         },
 
         removeCustomer : (state) => {
-
-            state.customerName = "",
-            state.customerPhone = "",
-            state.guests = 0
+            state.customerName = "";
+            state.customerPhone = "";
+            state.guests = 0;
+            state.orderId = "";
+            state.orderTime = "";
+            state.table = null;
         },
 
         updateTable : (state, action) => {
 
-            state.tableNo = action.payload.tableNo;
+            state.table = action.payload.table;
         }
     }
 })
