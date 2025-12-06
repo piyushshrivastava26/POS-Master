@@ -30,7 +30,19 @@ const orderSchema = new mongoose.Schema({
     table : {
         type : mongoose.Schema.Types.ObjectId,
         ref : "Table"
+    },
+
+    paymentMethod: {
+        type: String,
+        enum: ["Cash", "Online"],
+        required: true
+    },
+
+    paymentData: {
+        razorpay_order_id: String,
+        razorpay_payment_id: String
     }
+
 
 }, {timestamps : true})
 

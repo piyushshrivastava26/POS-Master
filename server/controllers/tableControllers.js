@@ -56,23 +56,23 @@ const updateTable = async (req, res, next) => {
     // and to store the order id as well
     try {
         
-        const {status, orderID} = req.body
+        const {status, orderId} = req.body
 
-        if(!status || !orderID){
+        if(!status || !orderId){
             const error = createHttpError(400, "All feilds are required")
             return next(error)
         }
 
         const ID = req.params.id
-        if(! mongoose.Types.ObjectId.isValid(ID)){
-            // means ID is not valid
-            const error = createHttpError(404, "Invalid ID")
-            return next(error)
-        }
+        // if(! mongoose.Types.ObjectId.isValid(ID)){
+        //     // means ID is not valid
+        //     const error = createHttpError(404, "Invalid ID")
+        //     return next(error)
+        // }
 
         const table = await Table.findByIdAndUpdate(
             ID,  // fetch the ID from URL
-            {status, currentOrder : orderID},
+            {status, currentOrder : orderId},   // field to be updated
             {new : true}
         )
 
