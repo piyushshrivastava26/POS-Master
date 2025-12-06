@@ -2,11 +2,30 @@ import React, { useState } from 'react'
 import BottomNav from '../components/shared/BottomNav'
 import OrderCard from '../components/orders/OrderCard'
 import BackButton from '../components/shared/BackButton'
+import { keepPreviousData, useQuery } from '@tanstack/react-query'
+import { getAllOrder } from '../https'
+import { enqueueSnackbar } from 'notistack'
 
 const Orders = () => {
 
     const[status, setStatus] = useState("all")
-    
+
+    const {data:resData, error} = useQuery({
+        queryKey: ["orders"],
+
+        queryFn: async () => {
+            return await getAllOrder()
+        },
+
+        placeholderData: keepPreviousData
+    })
+    if(error){
+        enqueueSnackbar("Something went wrong at 'getAllOrder()'", {variant : "error"})
+    }
+
+    console.log("orders_data", resData)
+    console.log("orders_actual_data", resData?.data.data)
+        
     return (
         <>
             <section className='bg-[#1f1f1f] h-[calc(100vh-5rem)] overflow-hidden'>
@@ -49,27 +68,21 @@ const Orders = () => {
                     </div>
                 </div>
 
-                <div className='px-16 py-3 flex flex-wrap gap-5 overflow-y-scroll h-[calc(100vh-12rem)] no-scrollbar'>
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
-                    <OrderCard />
+                <div className='px-16 py-3 flex flex-wrap gap-4 overflow-y-scroll  no-scrollbar'>
+                    {
+                        resData?.data.data.length > 0 ? (
+                            resData.data.data.map((order) => {
+
+                                return <OrderCard key={order._id} order={order} />
+                            })
+                        ) : (
+                            
+                                <p className="text-gray-400 text-lg tracking-wide font-medium">
+                                    No orders present at the moment
+                                </p>
+                            
+                        )
+                    }
                 </div>
 
                 <BottomNav />
