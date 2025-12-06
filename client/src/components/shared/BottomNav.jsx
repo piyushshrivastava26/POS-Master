@@ -16,8 +16,8 @@ const BottomNav = () => {
     const [isModelOpen, setIisModelOpen] = useState(false)
     const [guestCount, setGuestCount] = useState(0)
 
-    const [name, setName] = useState()
-    const [phone, setPhone] = useState()
+    const [name, setName] = useState("")
+    const [phone, setPhone] = useState("")
 
     const openModal = () => {
         return setIisModelOpen(true)
@@ -44,6 +44,9 @@ const BottomNav = () => {
     }
 
     const handleCreateOrder = () => {
+        if (!name.trim()) return alert("Enter customer name")
+        if (!phone.trim() || phone.length < 10) return alert("Enter valid phone")
+
         // send data to store
         dispatch(setCustomer({name, phone, guests: guestCount}))
 
