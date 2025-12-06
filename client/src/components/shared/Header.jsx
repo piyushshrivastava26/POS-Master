@@ -50,25 +50,17 @@ const Header = () => {
                 <h1 className='text-[#f5f5f5] text-lg font-semibold'>Restro</h1>
             </div>
 
-            {/* search bar */}
-            <div className="px-5 py-2 flex items-center gap-4 bg-[#1f1f1f] rounded-[15px] w-[500px]">
-                <FaSearch className="text-[#b5b5b5] mr-2" size={14} />
-                <input
-                type="text"
-                placeholder="Search"
-                className="w-full bg-transparent text-[#f5f5f5] placeholder-[#8a8a8a] outline-none"
-                />
-            </div>
+            {
+                userData.role === "Admin" && (
+                    <div onClick={() => navigate("/dashboard")} className='p-3 cursor-pointer rounded-[15px] flex items-center-safe text-lg gap-1 font-semibold text-[#f5f5f5]'>
+                        <MdDashboard className='text-[#f5f5f5] text-xl' /> Dashboard
+                    </div>
+                )
+            }
 
             {/* displaying logged user details */}
             <div className='flex items-center gap-4'>
-                {
-                    userData.role === "Admin" && (
-                        <div onClick={() => navigate("/dashboard")} className='p-3 bg-[#1f1f1f] cursor-pointer rounded-[15px]'>
-                            <MdDashboard className='text-[#f5f5f5] text-2xl' />
-                        </div>
-                    )
-                }
+                
 
                 <div className='p-3 bg-[#1f1f1f] cursor-pointer rounded-[15px]'>
                     <FaBell className='text-[#f5f5f5] text-2xl' />
