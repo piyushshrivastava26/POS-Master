@@ -368,8 +368,8 @@ const menus = [
                     style={{ backgroundColor: menu.bgColor }}
                     className="flex flex-col items-start justify-between p-3 rounded h-[90px] cursor-pointer"
                     onClick={() => {
-                    setSelectedMenu(menu)
-                    setItemCount(0)
+                      setSelectedMenu(menu)
+                      setItemCount(0)
                     }}
                 >
                     <div className="flex items-center justify-between w-full">

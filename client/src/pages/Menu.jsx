@@ -23,7 +23,7 @@ const Menu = () => {
             
             {/* left div */}
             <div className=' flex-3'>
-                <div className='px-8 py-3 mt-2 flex items-center justify-between'>
+                <div className='px-8 py-3 mt-2 mr-2 flex items-center justify-between'>
                     
                     <div className='flex items-center gap-4'>
                         <BackButton />
@@ -35,7 +35,7 @@ const Menu = () => {
                             <IoRestaurant  className='text-[#f5f5f5] text-4xl' />
                             <div className='flex flex-col items-start'>
                                 <h1 className='text-[#f5f5f5] text-md font-semibold'>{customerData.customerName || "Customer Name"}</h1>
-                                <p className='text-[#ababab] text-xs font-medium'>{customerData.tableNo || "N/A"}</p>
+                                <p className='text-[#ababab] text-xs font-medium'>Table : {customerData.table?.tableNo || "N/A"}</p>
                             </div>
                         </div>
                     </div>

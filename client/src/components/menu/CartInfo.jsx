@@ -20,7 +20,7 @@ const CartInfo = () => {
     const handleIncreaseInNoOfQuantity = (item) => {
 
         const newObj = {
-            id : item.id,
+            id: Date.now().toString(),
             name: item.name,
             pricePerQuantity: item.pricePerQuantity,
             quantity: 1,   // increase by 1
@@ -37,7 +37,7 @@ const CartInfo = () => {
             scrollRef.current.scrollTo({
                 
                 top: scrollRef.current.scrollHeight,
-                behaviour: "smooth"
+                behavior: "smooth"
             })
         }
 
@@ -66,7 +66,7 @@ const CartInfo = () => {
 
                         ) : cartData.map((item) => {
                             return (
-                                <div className='bg-[#1f1f1f] px-3 py-2 mb-2 rounded-lg'>
+                                <div key={item.id} className='bg-[#1f1f1f] px-3 py-2 mb-2 rounded-lg'>
 
                                     <div className='flex items-center justify-between'>
                                         <h1 className='text-[#ababab] font-semibold tarcking-wide text-base'>
