@@ -5,7 +5,7 @@
 
 ## Live Demonstration
 
-**Live Deployment:** [Insert Render Link Here]
+**Deployed URL:** [https://pos-master-client.onrender.com/]
 
 
 
