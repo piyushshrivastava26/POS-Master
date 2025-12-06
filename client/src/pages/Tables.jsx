@@ -50,7 +50,7 @@ const Tables = () => {
     }
 
     console.log("tables_data", resData)
-    console.log("need", resData?.data.data)
+    console.log("table_actual_data", resData?.data.data)
 
     return (
         <section className='bg-[#1f1f1f] h-[calc(100vh-5rem)] overflow-hidden'>
@@ -93,7 +93,6 @@ const Tables = () => {
                     resData?.data.data.map((table) => {
                         return (
                             <TableCard 
-                                key={table._id}
                                 id={table._id}
                                 name={table.tableNo} 
                                 status={table.status} 
