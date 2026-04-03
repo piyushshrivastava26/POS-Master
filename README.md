@@ -239,7 +239,7 @@ Fork the repo, make changes, and open a PR.
 **Piyush Shrivastava**
 * Full Stack Developer
 * [Portfolio](yourportfolio.com)
-* [Linkedin](https://www.linkedin.com/in/piyush-shrivastava-%F0%9F%87%AE%F0%9F%87%B3-58351825b/)
+* [Linkedin](https://www.linkedin.com/in/piyush-shrivastava-58351825b/)
 
 
 ## License
