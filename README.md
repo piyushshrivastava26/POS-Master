@@ -238,7 +238,7 @@ Fork the repo, make changes, and open a PR.
 
 **Piyush Shrivastava**
 * Full Stack Developer
-* [Portfolio](yourportfolio.com)
+* [Portfolio](https://portfolio-v1-iota-gray.vercel.app/)
 * [Linkedin](https://www.linkedin.com/in/piyush-shrivastava-58351825b/)
 
 
